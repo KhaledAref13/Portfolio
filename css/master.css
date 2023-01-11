@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: #0075ff;
+  --white-color: white;
+  --black-color: black;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Start Navbar */
+.navbar {
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1511111154;
+}
+.navbar ul {
+  list-style: none;
+}
+.navbar ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.navbar ul li .active {
+  border-bottom: 1px solid var(--white-color);
+}
+.navbar ul li:hover {
+  border-bottom: 1px solid var(--white-color);
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+/* End Navbar */
+/* Start Home Section */
+.home-section {
+  margin-top: 87px;
+  height: calc(100vh - 87px);
+  background: url("../img/background.jfif") center no-repeat fixed;
+  background-size: cover;
+}
+.home-section .overlay {
+  height: calc(100vh - 87px);
+  background-color: rgb(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-section .overlay .home-info h1 {
+  color: var(--main-color);
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.home-section .overlay .home-info p {
+  color: var(--white-color);
+  text-align: center;
+  font-size: 25px;
+  margin-top: 20px;
+}
+.home-section .overlay .home-info span {
+  color: var(--main-color);
+}
+.home-section .overlay .home-info .contact-info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-section .overlay .home-info .contact-info .contact-info-tool {
+  width: 40px;
+  height: 40px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-section .overlay .home-info .contact-info a {
+  text-decoration: none;
+}
+.home-section .overlay .home-info .contact-info .contact-info-tool i {
+  color: var(--main-color);
+}
+/* End Home Section */
+/* Start About Me Section */
+.about-me {
+  padding: 50px 100px;
+  display: grid;
+  grid-template-areas: "article article article article about-img about-img about-img about-img";
+  column-gap: 20px;
+}
+.about-me img {
+  grid-area: about-img;
+  width: 100%;
+}
+.about-me .about-me-content {
+  grid-area: article;
+  font-size: 20px;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+}
+/* End About Me Section */
+/* Start Program Section */
+.program {
+  background-color: var(--main-color);
+  padding: 50px 100px;
+  display: grid;
+  grid-template-areas:
+    "program-title program-title program-title program-title program-title program-title program-title program-title"
+    "motivate motivate motivate motivate motivate geeks geeks geeks";
+  column-gap: 20px;
+}
+.program h1 {
+  grid-area: program-title;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--white-color);
+  letter-spacing: 3px;
+}
+.program img {
+  grid-area: geeks;
+  width: 100%;
+}
+.program article {
+  grid-area: motivate;
+  color: var(--white-color);
+  line-height: 40px;
+}
+.program-article {
+  display: flex;
+  align-items: center;
+}
+/* End Program Section */
+/* Start Portfolio Section */
+.portfolio {
+  padding: 50px 100px;
+  display: grid;
+  grid-template-areas:
+    "portfolio-title portfolio-title portfolio-title portfolio-title portfolio-title portfolio-title portfolio-title portfolio-title portfolio-title"
+    "portfolio1 portfolio1 portfolio1 portfolio2 portfolio2 portfolio2 portfolio3 portfolio3 portfolio3";
+  column-gap: 20px;
+  justify-content: space-evenly;
+}
+.portfolio h1 {
+  grid-area: portfolio-title;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--main-color);
+  letter-spacing: 3px;
+}
+.portfolio1,
+.portfolio2,
+.portfolio3 {
+  display: flex;
+  justify-content: center;
+}
+.portfolio1 {
+  grid-area: portfolio1;
+}
+.portfolio2 {
+  grid-area: portfolio2;
+}
+.portfolio3 {
+  grid-area: portfolio3;
+}
+.portfolio-img {
+  width: 300px;
+  border-radius: 5px;
+}
+.portfolio-img img {
+  width: 100%;
+  height: 187.5px;
+}
+.portfolio p {
+  text-align: center;
+  font-size: 20px;
+}
+.portfolio a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+/* End Portfolio Section */
+/* Start Links Section */
+.links {
+  padding: 50px 100px;
+  background-color: var(--main-color);
+  display: grid;
+  grid-template-areas:
+    "links-title links-title links-title links-title links-title links-title links-title links-title links-title"
+    "one one one two two two three three three";
+  column-gap: 20px;
+  justify-content: space-evenly;
+}
+.link {
+  display: flex;
+  justify-content: center;
+}
+.our-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.links h1 {
+  grid-area: links-title;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--white-color);
+  letter-spacing: 3px;
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.link .circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link .circle i {
+  font-size: 200px;
+  color: var(--white-color);
+}
+.link p {
+  margin-top: 20px;
+  font-size: 20px;
+  color: var(--white-color);
+}
+.link a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+/* End Links Section */
+/* Start Contact Me Section */
+.contact-me {
+  padding: 50px 100px;
+}
+.contact-me h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--main-color);
+  letter-spacing: 3px;
+}
+.contact-me form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact-me form input,
+textarea {
+  padding: 10px;
+  outline: none;
+  border: 1px solid var(--main-color);
+  width: 100%;
+}
+.contact-me form input {
+  margin-bottom: 30px;
+}
+.contact-me form textarea {
+  min-height: 250px;
+}
+.contact-me form input,
+textarea::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+.contact-me button {
+  margin-top: 20px;
+  padding: 10px 0;
+  width: 120px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+/* End Contact Me Section */
+/* Start Footer */
+footer {
+  padding: 10px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+/* End Footer */
